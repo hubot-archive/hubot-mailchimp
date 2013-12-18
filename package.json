@@ -21,7 +21,7 @@
   },
 
   "dependencies": {
-    "coffee-script": "~1.6"
+    "coffee-script": "~1.6",
 	"mailchimp": "1.1.0"
   },
 
