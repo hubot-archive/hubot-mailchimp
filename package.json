@@ -1,31 +1,30 @@
 {
   "name": "hubot-mailchimp",
   "description": "Mailchimp hubot script as an NPM package",
-  "version": "1.1.1",
-  "author": "Mathieu BAUMGARTNER <https://github.com/m-baumgartner>",
+  "version": "1.1.2",
+  "author": {
+    "name": "Mathieu BAUMGARTNER",
+    "email": "https://github.com/m-baumgartner"
+  },
   "license": "MIT",
-
   "keywords": [
     "hubot",
     "hubot-scripts",
-	"mailchimp"
+    "mailchimp"
   ],
-
   "repository": {
     "type": "git",
     "url": "git://github.com/m-baumgartner/hubot-mailchimp.git"
   },
-
   "bugs": {
     "url": "https://github.com/m-baumgartner/hubot-mailchimp/issues"
   },
-
   "dependencies": {
     "coffee-script": "~1.6",
-	"mailchimp": "1.1.0"
+    "mailchimp": "1.1.0"
   },
-
-  "main": "index.coffee"
-
+  "main": "mailchimp-subscribe.coffee",
+  "readme": "hubot-mailchimp\n===============\n\nMailchimp hubot script as an NPM package\n",
+  "readmeFilename": "README.md",
+  "homepage": "https://github.com/m-baumgartner/hubot-mailchimp"
 }
-
