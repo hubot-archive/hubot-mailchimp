@@ -23,7 +23,7 @@
     "coffee-script": "~1.6",
     "mailchimp": "1.1.0"
   },
-  "main": "mailchimp-subscribe.coffee",
+  "main": "index.coffee",
   "readme": "hubot-mailchimp\n===============\n\nMailchimp hubot script as an NPM package\n",
   "readmeFilename": "README.md",
   "homepage": "https://github.com/m-baumgartner/hubot-mailchimp"
