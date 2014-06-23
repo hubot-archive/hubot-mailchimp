@@ -14,10 +14,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/m-baumgartner/hubot-mailchimp.git"
+    "url": "git://github.com/hubot-scripts/hubot-mailchimp.git"
   },
   "bugs": {
-    "url": "https://github.com/m-baumgartner/hubot-mailchimp/issues"
+    "url": "https://github.com/hubot-scripts/hubot-mailchimp/issues"
   },
   "dependencies": {
     "coffee-script": "~1.6",
@@ -26,5 +26,5 @@
   "main": "index.coffee",
   "readme": "hubot-mailchimp\n===============\n\nMailchimp hubot script as an NPM package\n",
   "readmeFilename": "README.md",
-  "homepage": "https://github.com/m-baumgartner/hubot-mailchimp"
+  "homepage": "https://github.com/hubot-scripts/hubot-mailchimp"
 }
