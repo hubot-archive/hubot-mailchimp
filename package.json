@@ -1,7 +1,7 @@
 {
   "name": "hubot-mailchimp",
   "description": "Mailchimp hubot script as an NPM package",
-  "version": "1.1.6",
+  "version": "1.2.0",
   "author": {
     "name": "Mathieu BAUMGARTNER",
     "email": "https://github.com/m-baumgartner"
