@@ -28,3 +28,4 @@ Then add 'hubot-mailchimp' to your `external_scripts.json` file and run `npm ins
 ## Commands
 
     hubot subscribe <email> - Add email to list
+    hubot unsubscribe <email> - Remove email from list
