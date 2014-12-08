@@ -27,7 +27,7 @@ module.exports = (robot) ->
   robot.respond /\bunsubscribe (.+@.+)/i, (message) ->
     unsubscribeFromList message
   robot.respond /\bmailchimp/i, (message) ->
-    latestCampaign
+    latestCampaign message
 
 subscribeToList = (message) ->
   emailAddress = message.match[1]
