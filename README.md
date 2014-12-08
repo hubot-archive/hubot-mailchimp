@@ -23,9 +23,10 @@ Then add 'hubot-mailchimp' to your `external_scripts.json` file and run `npm ins
 ## Config
 
     MAILCHIMP_API_KEY
-	MAILCHIMP_LIST_ID
+	  MAILCHIMP_LIST_ID
 
 ## Commands
 
     hubot subscribe <email> - Add email to list
     hubot unsubscribe <email> - Remove email from list
+    hubot mailchimp - Get statistics from latest mailing

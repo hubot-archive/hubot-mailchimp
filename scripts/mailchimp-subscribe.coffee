@@ -14,7 +14,7 @@
 #   hubot mailchimp - Get statistics from latest mailing
 #
 # Author:
-#   max, lmarburger, m-baumgartner, sporkmonger
+#   max, lmarburger, m-baumgartner, sporkmonger, stephenyeargin
 
 MailChimpAPI = require('mailchimp').MailChimpAPI
 
@@ -98,5 +98,4 @@ latestCampaign = (message) ->
         if error
           message.send "Uh oh, something went wrong: #{error.message}"
         else
-          stats = data['data']
-          message.send "Last campaign \"#{campaign_name}\" was sent to #{stats['emails_sent']} subscribers (#{stats['unique_opens']} opened, #{stats['unique_clicks']} clicked, #{stats['unsubscribes']} unsubscribed)"
+          message.send "Last campaign \"#{campaign_name}\" was sent to #{data['emails_sent']} subscribers (#{data['unique_opens']} opened, #{data['unique_clicks']} clicked, #{data['unsubscribes']} unsubscribed)"
