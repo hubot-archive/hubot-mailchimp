@@ -1,6 +1,7 @@
 # Hubot-Mailchimp
 
 [![Build Status](https://travis-ci.org/hubot-scripts/hubot-mailchimp.svg)](https://travis-ci.org/hubot-scripts/hubot-mailchimp)
+[![npm version](https://badge.fury.io/js/hubot-mailchimp.svg)](http://badge.fury.io/js/hubot-mailchimp)
 
 Mailchimp hubot script as an NPM package
 Request the mailchimp API from campfire/hipchat or anywhere you can join hubot.
