@@ -16,7 +16,8 @@
 # Author:
 #   max, lmarburger, m-baumgartner, sporkmonger, stephenyeargin
 
-MailChimpAPI = require('mailchimp').MailChimpAPI
+Mailchimp = require('mailchimp-api-v3')
+crypto = require('crypto')
 
 apiKey = process.env.MAILCHIMP_API_KEY
 listId = process.env.MAILCHIMP_LIST_ID
@@ -34,19 +35,19 @@ subscribeToList = (message) ->
   message.reply "Attempting to subscribe #{emailAddress}..."
 
   try
-    api = new MailChimpAPI(apiKey,
-      version: "1.3"
-      secure: false
-    )
+    api = new Mailchimp(apiKey)
   catch error
     console.log error.message
     return
 
-  api.listSubscribe
-    id:            listId
-    email_address: emailAddress
-    double_optin:  false
-  , (error, data) ->
+  api.request {
+    method: 'post',
+    path: "/lists/#{listId}/members",
+    body: {
+      email_address: emailAddress,
+      status: 'subscribed'
+    }
+  }, (error, data) ->
     if error
       message.send "Uh oh, something went wrong: #{error.message}"
     else
@@ -54,22 +55,19 @@ subscribeToList = (message) ->
 
 unsubscribeFromList = (message) ->
   emailAddress = message.match[1]
+  emailHash = crypto.createHash('md5').update(emailAddress).digest('hex')
   message.reply "Attempting to unsubscribe #{emailAddress}..."
 
   try
-    api = new MailChimpAPI(apiKey,
-      version: "1.3"
-      secure: false
-    )
+    api = new Mailchimp(apiKey)
   catch error
     console.log error.message
     return
 
-  api.listUnsubscribe
-    id:            listId
-    email_address: emailAddress
-    double_optin:  false
-  , (error, data) ->
+  api.request {
+    method: 'delete',
+    path: "/lists/#{listId}/members/#{emailHash}"
+  }, (error, data) ->
     if error
       message.send "Uh oh, something went wrong: #{error.message}"
     else
@@ -78,24 +76,26 @@ unsubscribeFromList = (message) ->
 latestCampaign = (message) ->
 
   try
-    api = new MailChimpAPI(apiKey,
-      version: "1.3"
-      secure: false
-    )
+    api = new Mailchimp(apiKey)
   catch error
     console.log error.message
     return
 
-  api.campaigns { start: 0, limit: 1 }, (error, data) ->
+  api.request {
+    method: 'get',
+    path: 'campaigns',
+    query: {
+      start: 0,
+      limit: 1,
+      status: 'sent'
+    }
+  }, (error, data) ->
     if error
       message.send "Uh oh, something went wrong: #{error.message}"
     else
       # Get the first campaign in the list
-      cid = data['data'][0]['id']
-      campaign_name = data['data'][0]['title']
-
-      api.campaignStats { cid : cid }, (error, data) ->
-        if error
-          message.send "Uh oh, something went wrong: #{error.message}"
-        else
-          message.send "Last campaign \"#{campaign_name}\" was sent to #{data['emails_sent']} subscribers (#{data['unique_opens']} opened, #{data['unique_clicks']} clicked, #{data['unsubscribes']} unsubscribed)"
+      if data['campaigns'].length > 0
+        campaign = data['campaigns'][0]
+        message.send "Last campaign \"#{campaign['settings']['title']}\" was sent to #{campaign['emails_sent']} subscribers (#{campaign['report_summary']['unique_opens']} opened, #{campaign['report_summary']['clicks']} clicked)"
+      else
+        message.send 'No recent campaigns sent.'

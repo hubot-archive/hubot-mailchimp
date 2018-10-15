@@ -6,6 +6,7 @@
     "name": "Mathieu BAUMGARTNER",
     "email": "https://github.com/m-baumgartner"
   },
+  "homepage": "https://github.com/hubot-scripts/hubot-mailchimp",
   "license": "MIT",
   "keywords": [
     "hubot",
@@ -20,11 +21,32 @@
     "url": "https://github.com/hubot-scripts/hubot-mailchimp/issues"
   },
   "dependencies": {
-    "coffee-script": "~1.6",
-    "mailchimp": "1.1.0"
+    "mailchimp-api-v3": "^1.12.0"
+  },
+  "peerDependencies": {
+    "hubot": ">=2 <10 || 0.0.0-development"
+  },
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "coffee-script": "^1.12.7",
+    "grunt": "^1.0.3",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-mocha-test": "^0.13.3",
+    "hubot-test-helper": "^1.9.0",
+    "husky": "^0.14.3",
+    "matchdep": "^2.0.0",
+    "mocha": "^5.2.0",
+    "nock": "^9.6.0",
+    "release-it": "^7.5.0",
+    "sinon": "^6.1.5",
+    "sinon-chai": "^3.2.0"
   },
   "main": "index.coffee",
-  "readme": "hubot-mailchimp\n===============\n\nMailchimp hubot script as an NPM package\n",
-  "readmeFilename": "README.md",
-  "homepage": "https://github.com/hubot-scripts/hubot-mailchimp"
+  "scripts": {
+    "release": "release-it",
+    "test": "grunt test",
+    "precommit": "npm test",
+    "prepush": "npm test"
+  }
 }

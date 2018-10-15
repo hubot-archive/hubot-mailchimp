@@ -1,0 +1,113 @@
+{
+  "campaigns": [
+    {
+      "id": "f6276207cc",
+      "type": "regular",
+      "create_time": "2015-07-20T15:40:41+00:00",
+      "archive_url": "http://eepurl.com/xxxx",
+      "status": "sent",
+      "emails_sent": 1,
+      "send_time": "2015-07-20T15:42:48+00:00",
+      "content_type": "template",
+      "recipients": {
+        "list_id": "1a2df69511",
+        "segment_text": "<p class=\"nomargin\">Subscribers match <strong>any</strong> of the following conditions:</p><ol id=\"conditions\" class=\"conditions\"><li class=\"mar-lv1 mar-lr0\">Static Segments member is part of <strong>Campaign Pasted Segment - 20 Jul 2015 11:41:09 am</strong></li></ol><span>For a total of <strong>1</strong> emails sent.</span>",
+        "segment_opts": {
+          "saved_segment_id": 48501,
+          "match": "any",
+          "conditions": [
+            {
+              "field": "static_segment",
+              "op": "static_is",
+              "value": 48501
+            }
+          ]
+        }
+      },
+      "settings": {
+        "subject_line": "Take my poll!",
+        "title": "Poll test",
+        "from_name": "Freddie",
+        "reply_to": "freddie@freddiesjokes.com",
+        "use_conversation": false,
+        "to_name": "*|FNAME|*",
+        "folder_id": 0,
+        "authenticate": true,
+        "auto_footer": false,
+        "inline_css": false,
+        "auto_tweet": false,
+        "fb_comments": false,
+        "timewarp": false,
+        "template_id": 91,
+        "drag_and_drop": true
+      },
+      "tracking": {
+        "opens": true,
+        "html_clicks": true,
+        "text_clicks": false,
+        "goal_tracking": false,
+        "ecomm360": false,
+        "google_analytics": true,
+        "clicktale": ""
+      },
+      "report_summary": {
+        "opens": 1,
+        "unique_opens": 1,
+        "open_rate": 1,
+        "clicks": 0,
+        "subscriber_clicks": 0,
+        "click_rate": 0
+      },
+      "delivery_status": {
+        "enabled": false
+      },
+      "_links": [
+        {
+          "rel": "parent",
+          "href": "https://usX.api.mailchimp.com/3.0/campaigns",
+          "method": "GET",
+          "targetSchema": "https://api.mailchimp.com/schema/3.0/Campaigns/Collection.json",
+          "schema": "https://api.mailchimp.com/schema/3.0/CollectionLinks/Campaigns.json"
+        },
+        {
+          "rel": "self",
+          "href": "https://usX.api.mailchimp.com/3.0/campaigns/f6276207cc",
+          "method": "GET",
+          "targetSchema": "https://api.mailchimp.com/schema/3.0/Campaigns/Instance.json"
+        },
+        {
+          "rel": "delete",
+          "href": "https://usX.api.mailchimp.com/3.0/campaigns/f6276207cc",
+          "method": "DELETE"
+        },
+        {
+          "rel": "cancel_send",
+          "href": "https://usX.api.mailchimp.com/3.0/campaigns/f6276207cc/actions/cancel-send",
+          "method": "POST"
+        },
+        {
+          "rel": "feedback",
+          "href": "https://usX.api.mailchimp.com/3.0/campaigns/f6276207cc/feedback",
+          "method": "GET",
+          "targetSchema": "https://api.mailchimp.com/schema/3.0/Campaigns/Feedback/Collection.json"
+        }
+      ]
+    }
+  ],
+  "total_items": 1,
+  "_links": [
+    {
+      "rel": "parent",
+      "href": "https://usX.api.mailchimp.com/3.0/",
+      "method": "GET",
+      "targetSchema": "https://api.mailchimp.com/schema/3.0/Root.json"
+    },
+    {
+      "rel": "self",
+      "href": "https://usX.api.mailchimp.com/3.0/campaigns",
+      "method": "GET",
+      "targetSchema": "https://api.mailchimp.com/schema/3.0/Campaigns/Collection.json",
+      "schema": "https://api.mailchimp.com/schema/3.0/CollectionLinks/Campaigns.json"
+    }
+  ]
+}
