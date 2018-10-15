@@ -1,5 +1,5 @@
 # Description:
-#   Add email to Mailchimp list
+#   Add or remove members to a mailing list and get a report of your latest sent campaign.
 #
 # Dependencies:
 #   "mailchimp": "1.1.0"

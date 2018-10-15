@@ -1,6 +1,6 @@
 {
   "name": "hubot-mailchimp",
-  "description": "Mailchimp hubot script as an NPM package",
+  "description": "Use Hubot to add or remove members to a mailing list and get a report of your latest sent campaign.",
   "version": "1.2.1",
   "author": {
     "name": "Mathieu BAUMGARTNER",

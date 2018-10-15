@@ -1,35 +1,53 @@
-# Hubot-Mailchimp
+# MailChimp for Hubot
 
-[![Build Status](https://travis-ci.org/hubot-scripts/hubot-mailchimp.svg)](https://travis-ci.org/hubot-scripts/hubot-mailchimp)
-[![npm version](https://badge.fury.io/js/hubot-mailchimp.svg)](http://badge.fury.io/js/hubot-mailchimp)
+[![npm version](https://badge.fury.io/js/hubot-mailchimp.svg)](http://badge.fury.io/js/hubot-mailchimp) [![Build Status](https://travis-ci.org/hubot-scripts/hubot-mailchimp.svg)](https://travis-ci.org/hubot-scripts/hubot-mailchimp)
 
-Mailchimp hubot script as an NPM package
-Request the mailchimp API from campfire/hipchat or anywhere you can join hubot.
-
+Use Hubot to add or remove members to a mailing list and get a report of your latest sent campaign.
 
 ## Installation
 
-Add 'hubot-mailchimp' to your `package.json` file, e.g.
+In the Hubot project repo, run:
 
-```json
-  "dependencies": {
-    "hubot": ">= 2.6.0 < 3.0.0",
-    "hubot-scripts": ">= 2.5.0 < 3.0.0",
-    "hubot-hipchat": "~2.6.4",
-    "hubot-mailchimp": "~1.1.3"
-  }
+```bash
+npm install hubot-mailchimp --save
 ```
 
-Then add 'hubot-mailchimp' to your `external_scripts.json` file and run `npm install`.
+Then add `hubot-mailchimp` to your `external-scripts.json`:
 
+```json
+[
+  "hubot-mailchimp"
+]
+```
 
-## Config
+## Configuration
 
-    MAILCHIMP_API_KEY
-	  MAILCHIMP_LIST_ID
+| Configuration Variable        | Required | Description                       |
+| ----------------------------- | -------- | --------------------------------- |
+| `MAILCHIMP_API_KEY` | **Yes** | API key for your Hubot integration.          |
+| `MAILCHIMP_LIST_ID` | **Yes** | The unique identifier for the desired list.  |
 
-## Commands
+## Sample Interaction
 
-    hubot subscribe <email> - Add email to list
-    hubot unsubscribe <email> - Remove email from list
-    hubot mailchimp - Get statistics from latest mailing
+### Add a member to the list by email
+
+```
+User> @hubot subscribe johndoe@example.com
+Hubot> @user Attempting to subscribe johndoe@example.com...
+Hubot> You successfully subscribed johndoe@example.com.
+```
+
+### Remove a member from the list by email
+
+```
+User> @hubot unsubscribe johndoe@example.com
+Hubot> @user Attempting to unsubscribe johndoe@example.com...
+Hubot> You successfully unsubscribed johndoe@example.com.
+```
+
+### Get the report from your latest sent campaign
+
+```
+User> @hubot mailchimp
+Hubot> Last campaign "My Awesome Campaign" was sent to 431 subscribers (310 opened, 225 clicked)
+```
