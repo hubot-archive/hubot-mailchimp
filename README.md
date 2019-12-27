@@ -1,4 +1,4 @@
-# MailChimp for Hubot
+# Mailchimp for Hubot
 
 [![npm version](https://badge.fury.io/js/hubot-mailchimp.svg)](http://badge.fury.io/js/hubot-mailchimp) [![Build Status](https://travis-ci.org/hubot-scripts/hubot-mailchimp.svg)](https://travis-ci.org/hubot-scripts/hubot-mailchimp)
 
