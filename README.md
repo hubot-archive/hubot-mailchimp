@@ -1,6 +1,6 @@
 # Mailchimp for Hubot
 
-[![npm version](https://badge.fury.io/js/hubot-mailchimp.svg)](http://badge.fury.io/js/hubot-mailchimp) [![Build Status](https://travis-ci.org/hubot-scripts/hubot-mailchimp.svg)](https://travis-ci.org/hubot-scripts/hubot-mailchimp)
+[![npm version](https://badge.fury.io/js/hubot-mailchimp.svg)](http://badge.fury.io/js/hubot-mailchimp) [![Node.js CI](https://github.com/hubot-scripts/hubot-mailchimp/workflows/Node.js%20CI/badge.svg)](https://github.com/hubot-scripts/hubot-mailchimp/actions)
 
 Use Hubot to add or remove members to a mailing list and get a report of your latest sent campaign.
 
