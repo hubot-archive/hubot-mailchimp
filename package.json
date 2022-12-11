@@ -1,7 +1,7 @@
 {
   "name": "hubot-mailchimp",
   "description": "Use Hubot to add or remove members to a mailing list and get a report of your latest sent campaign.",
-  "version": "1.3.5",
+  "version": "1.3.6",
   "author": {
     "name": "Mathieu BAUMGARTNER",
     "email": "https://github.com/m-baumgartner"
