@@ -24,7 +24,7 @@
     "mailchimp-api-v3": "^1.15.0"
   },
   "peerDependencies": {
-    "hubot": "^3"
+    "hubot": "^3 || ^4"
   },
   "devDependencies": {
     "chai": "^4.3.7",
