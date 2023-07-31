@@ -22,10 +22,11 @@ Then add `hubot-mailchimp` to your `external-scripts.json`:
 
 ## Configuration
 
-| Configuration Variable        | Required | Description                       |
-| ----------------------------- | -------- | --------------------------------- |
-| `MAILCHIMP_API_KEY` | **Yes** | API key for your Hubot integration.          |
-| `MAILCHIMP_LIST_ID` | **Yes** | The unique identifier for the desired list.  |
+| Configuration Variable    | Required | Description                                |
+| ------------------------- | -------- | ------------------------------------------ |
+| `MAILCHIMP_API_KEY`       | **Yes**  | API key for your Hubot integration         |
+| `MAILCHIMP_LIST_ID`       | **Yes**  | The unique identifier for the desired list |
+| `MAILCHIMP_SERVER_PREFIX` | **Yes**  | Server identifier, e.g. `us10`             |
 
 ## Sample Interaction
 

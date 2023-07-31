@@ -14,7 +14,7 @@ describe('mailchimp basic operations', () => {
   beforeEach(() => {
     process.env.MAILCHIMP_API_KEY = 'foo123bar456baz-us';
     process.env.MAILCHIMP_LIST_ID = '123foo456';
-    process.env.MAILCHIMP_SERVER_PREFIX = 'us';
+    process.env.MAILCHIMP_SERVER_PREFIX = 'us10';
     room = helper.createRoom();
     nock.disableNetConnect();
   });
@@ -29,7 +29,7 @@ describe('mailchimp basic operations', () => {
 
   context('subscribe a user', () => {
     beforeEach((done) => {
-      nock('https://us.api.mailchimp.com')
+      nock('https://us10.api.mailchimp.com')
         .post('/3.0/lists/123foo456/members')
         .replyWithFile(200, 'test/fixtures/subscriber-subscribed.json');
       room.user.say('alice', '@hubot subscribe johndoe@example.com');
@@ -45,7 +45,7 @@ describe('mailchimp basic operations', () => {
 
   context('unsubscribe a user', () => {
     beforeEach((done) => {
-      nock('https://us.api.mailchimp.com')
+      nock('https://us10.api.mailchimp.com')
         .delete('/3.0/lists/123foo456/members/fd876f8cd6a58277fc664d47ea10ad19')
         .reply(204);
       room.user.say('alice', '@hubot unsubscribe johndoe@example.com');
@@ -61,7 +61,7 @@ describe('mailchimp basic operations', () => {
 
   context('get latest campaign stats', () => {
     beforeEach((done) => {
-      nock('https://us.api.mailchimp.com')
+      nock('https://us10.api.mailchimp.com')
         .get('/3.0/campaigns')
         .query({
           offset: 0,

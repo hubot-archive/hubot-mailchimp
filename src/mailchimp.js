@@ -22,7 +22,7 @@ const mailchimp = require('@mailchimp/mailchimp_marketing');
 
 const apiKey = process.env.MAILCHIMP_API_KEY;
 const listId = process.env.MAILCHIMP_LIST_ID;
-const server = process.env.MAILCHIMP_SERVER_PREFIX;
+const server = process.env.MAILCHIMP_SERVER_PREFIX || 'us';
 
 module.exports = (robot) => {
   mailchimp.setConfig({
