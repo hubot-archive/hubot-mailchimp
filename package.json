@@ -6,7 +6,7 @@
     "name": "Mathieu BAUMGARTNER",
     "email": "https://github.com/m-baumgartner"
   },
-  "homepage": "https://github.com/hubot-scripts/hubot-mailchimp",
+  "homepage": "https://github.com/hubot-archive/hubot-mailchimp",
   "license": "MIT",
   "keywords": [
     "hubot",
@@ -15,10 +15,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/hubot-scripts/hubot-mailchimp.git"
+    "url": "git://github.com/hubot-archive/hubot-mailchimp.git"
   },
   "bugs": {
-    "url": "https://github.com/hubot-scripts/hubot-mailchimp/issues"
+    "url": "https://github.com/hubot-archive/hubot-mailchimp/issues"
   },
   "dependencies": {
     "@mailchimp/mailchimp_marketing": "^3.0.80"
