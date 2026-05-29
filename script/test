@@ -3,4 +3,6 @@
 # bootstrap environment
 source script/bootstrap
 
-mocha "test/**/*.js" --reporter spec --exit
+test_count=$(find test -type f -name '*_test.js' | wc -l | tr -d ' ')
+if [ "$test_count" -eq 0 ]; then echo "No test files found"; exit 1; fi
+find test -type f -name '*_test.js' -print0 | xargs -0 node --test
